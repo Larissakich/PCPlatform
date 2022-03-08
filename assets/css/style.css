@@ -1,0 +1,481 @@
+body {
+    background-color: #00510f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+}
+
+
+/* inicio index */
+
+.pecas_titulo {
+    font-size: large;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 80vh;
+    color: white;
+}
+
+.conteudo {
+    margin-top: 50px;
+    position: absolute;
+}
+
+.pecas_iniciais {
+    display: flex;
+    position: relative;
+}
+
+.pecas_direita {
+    margin-left: 100px;
+}
+
+.monitor_inicial {
+    margin-top: 30px;
+}
+
+.teclado_inicial {
+    margin-left: 10px;
+}
+
+.mouse_inicial {
+    margin-top: 330px;
+}
+
+.gabinete_inicial {
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+
+/* fim index */
+
+
+/* Inicio Nav-bar*/
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo {
+    height: 8vh;
+    margin-right: 150px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    background: #00510f;
+    height: 8vh;
+    font-size: 18px;
+    padding-right: 230px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 100px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: 0.2s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        padding-right: 0;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 77.5vh;
+        background: #00510f;
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.2s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+/*Fim Nav-Bar */
+
+
+/*Inicio footer */
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    background: #17882c;
+    height: auto;
+    width: 100vw;
+    font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    ;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p {
+    width: 200px;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: #ccc;
+}
+
+.footer-bottom {
+    background: #00510f;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+
+/*Fim Footer */
+
+
+/* inicio gabinete */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    height: calc(100vh - 200px);
+}
+
+.gabinete {
+    content: url(../img/nopc.png);
+    height: 400px;
+    position: absolute;
+}
+
+.part_text_gabinete {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 400px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 4px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    margin-left: 650px;
+    padding: 20px;
+}
+
+div .partes {
+    margin-right: 550px;
+    position: relative;
+    display: flex;
+}
+
+div .mother_fonte {
+    margin-top: 13px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.placa_mae {
+    margin-left: 10px;
+    margin-top: 42px;
+}
+
+.fonte {
+    width: 200px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+.hd {
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.nada {
+    height: 200px;
+    width: 100px;
+}
+
+
+/* fim main gabinete */
+
+
+/* inicio placa mãe */
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.part_img {
+    content: url(../img/nomotherboard.png);
+    height: 400px;
+}
+
+.pecas_board {
+    position: relative;
+}
+
+div .pecas_cima {
+    display: flex;
+    margin-right: 460px;
+}
+
+.gpu img {
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 60px;
+}
+
+.processador img {
+    margin-top: 65px;
+    margin-left: 155px;
+}
+
+.ram {
+    margin-left: 85px;
+    margin-top: 30px;
+}
+
+.part_text {
+    margin-bottom: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 400px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 4px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.part_text p {
+    margin: 20px;
+    font-size: 14px;
+}
+
+.seta i {
+    font-size: 35px;
+    color: white;
+}
+
+.seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    background-color: #012514;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px;
+    ;
+}
+
+
+/* modal*/
+
+.modal_gpu,
+.modal_processador,
+.modal_ram {
+    position: fixed;
+    width: 100%;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.767);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.modal_gpu:target {
+    visibility: visible;
+}
+
+.modal_processador:target {
+    visibility: visible;
+}
+
+.modal_ram:target {
+    visibility: visible;
+}
+
+.modal_content {
+    display: flex;
+    background-color: rgb(197, 193, 193);
+    height: 400px;
+    border-radius: 3px;
+    border-top: 5px solid #012514;
+}
+
+.modal_img {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_text {
+    margin: 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_text p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.modal_text h1 {
+    margin-bottom: 10px;
+}
+
+.modal_btn i {
+    color: black;
+    font-size: 30px;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.part_text_gabinete p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+/* inicio sobre*/
+
+.sobre {
+    margin: 40px;
+}
+
+.sobre_projeto {
+    margin-bottom: 40px;
+    font-size: 13px;
+}
+
+.sobre_projeto p {
+    margin: 15px;
+    margin-bottom: 2px;
+}
+
+.sobre_orientador {
+    margin-right: 80px;
+}
+
+
+/* fim sobre*/
